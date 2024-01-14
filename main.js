@@ -3,12 +3,25 @@
 the list and checks that the current name is in the string passed in. The output should be:
 "Matched dog_name" if name is in the string, if no matches are present console.log "No Matches"
 */
+
+function findWords(dogStr,dogName){
+    let matched = false;
+
+    for (const name of dogName) {
+      if (dogStr.includes(name)) {
+        console.log(`Matched ${name}`);
+        matched = true;
+      }
+    }
+  
+    if (!matched) {
+      console.log("No Matches");
+    }
+  }
+
 let dog_string = "Hello Max, my name is Dog, and I have purple eyes!"
 let dog_names = ["Max","HAS","PuRple","dog"]
-
-function findWords(){
-
-}
+findWords(dog_string,dog_names)
 
 // //Call method here with parameters
 
@@ -18,12 +31,17 @@ function findWords(){
 
 // Given arr == ["Max","Baseball","Reboot","Goku","Trucks","Rodger"]
 
-let arr = ["Max","Baseball","Reboot","Goku","Trucks","Rodger"]
-
-function replaceEvens(arr){
-    
+function replaceEvens(arr) {
+    for (let i = 0; i < arr.length; i += 2) {
+        arr.splice(i, 1, "even index");
+    }
+    return arr;
 }
 
+const originalArr = ["Max", "Baseball", "Reboot", "Goku", "Trucks", "Rodger"];
+const NewArr = replaceEvens(originalArr);
+
+console.log(NewArr);
 //Expected output
 //Given arr == ["Max","Baseball","Reboot","Goku","Trucks","Rodger"]
 //Output arr == ["even index","Baseball","even index","Goku","even index","Rodger"]
