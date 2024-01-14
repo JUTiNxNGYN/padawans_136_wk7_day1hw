@@ -38,8 +38,8 @@ function replaceEvens(arr) {
     return arr;
 }
 
-const originalArr = ["Max", "Baseball", "Reboot", "Goku", "Trucks", "Rodger"];
-const NewArr = replaceEvens(originalArr);
+const Arr = ["Max", "Baseball", "Reboot", "Goku", "Trucks", "Rodger"];
+const NewArr = replaceEvens(Arr);
 
 console.log(NewArr);
 //Expected output
